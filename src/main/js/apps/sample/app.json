@@ -34,7 +34,9 @@
             "theme-autumn",
             "toc",
             "toolset",
-            "dn_imprintprivacy"
+            "dn_imprintprivacy",
+            "dn_editing-bulkaction",
+            "editing"
         ],
         "i18n": [
             "bundle"
@@ -96,6 +98,18 @@
                 ],
                 "map": {
                     "layers": [
+                        {
+                            "id": "stoerung",
+                            "title": "Störungen",
+                            "type": "AGS_FEATURE",
+                            "description": "Störungen",
+                            "url": "https://services.conterra.de/server/rest/services/mapapps/stoerung/FeatureServer/0",
+                            "popupEnabled": true,
+                            "useIn": [
+                                "querybuilder",
+                                "selection"
+                            ]
+                        },
                         {
                             "id": "koeln1",
                             "title": "${map.koeln1.title}",
