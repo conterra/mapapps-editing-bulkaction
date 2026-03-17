@@ -1,0 +1,49 @@
+{
+    "name": "dn_editing-bulkaction",
+    "version": "1.0.0",
+    "title": "${bundleName}",
+    "description": "${bundleDescription}",
+    "vendor": "con terra GmbH",
+    "productName": "dn-editing-bulkaction",
+    "main": "",
+    "i18n": [
+        "bundle"
+    ],
+    "dependencies": {
+        "apprt-core": "^4.20.0"
+    },
+    "components": [
+        {
+            "name": "EditingBulkAction",
+            "provides": [
+                "result-api.BulkTableAction"
+            ],
+            "propertiesConstructor": true,
+            "properties": {
+                "id": "editing",
+                "icon": "esri-icon-edit",
+                "label": "${ui.label}",
+                "tooltip": "${ui.tooltip}",
+                "rules": [
+                    {
+                        "result-ui-min-selected-items": 1
+                    }
+                ]
+            },
+            "references": [
+                {
+                    "name": "_editingWidget",
+                    "providing": "dijit.Widget",
+                    "filter": "(widgetRole=editing)",
+                    "cardinality": "0..1"
+                },
+                {
+                    "name": "_editingToggleTool",
+                    "providing": "ct.tools.Tool",
+                    "filter": "(id=editingToggleTool)",
+                    "cardinality": "0..1"
+                }
+            ]
+        }
+    ]
+}
