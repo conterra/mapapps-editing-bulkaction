@@ -16,7 +16,8 @@
 
 import async from "apprt-core/async";
 
-import type { BulkButtonTableAction, BulkActionContext } from "result-api/api";
+
+import type { BulkButtonTableAction, BulkActionContext, TableActionDisplayState, DataTable} from "result-api/api";
 import type { InjectedReference } from "apprt-core/InjectedReference";
 
 export class EditingBulkAction implements BulkButtonTableAction {
@@ -60,6 +61,12 @@ export class EditingBulkAction implements BulkButtonTableAction {
 
         }, 1000);
     }
+
+    provideDisplayState(dataTable: DataTable): Partial<TableActionDisplayState> {
+        const visible = this._properties!.storeIds.includes(dataTable.id);
+        return { visible };
+    }
+
     async getGraphicsByIds(objectIds: any[], layer: any): Promise<any> {
         const query = layer.createQuery();
         query.objectIds = objectIds;

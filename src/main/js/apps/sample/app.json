@@ -43,6 +43,13 @@
         ]
     },
     "bundles": {
+        "dn_editing-bulkaction": {
+            "Config": {
+                "storeIds": [
+                    "stoerung"
+                ]
+            }
+        },
         "agssearch": {
             "AutoStoreRegistration": {
                 "componentEnabled": true

@@ -14,7 +14,8 @@
     },
     "components": [
         {
-            "name": "EditingBulkAction",
+            "name": "Config",
+            "impl": "EditingBulkAction",
             "provides": [
                 "result-api.BulkTableAction"
             ],
