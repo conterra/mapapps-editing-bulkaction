@@ -1,7 +1,10 @@
+[![devnet-bundle-snapshot](https://github.com/conterra/mapapps-bookmarks/actions/workflows/devnet-bundle-snapshot.yml/badge.svg)](https://github.com/conterra/mapapps-bookmarks/actions/workflows/devnet-bundle-snapshot.yml)
+![Static Badge](https://img.shields.io/badge/tested_for_map.apps-4.20.3-%20?labelColor=%233E464F&color=%232FC050)
 # Editing Bulk Action
 
 This bundle adds a bulk action to the result UI, allowing users to open the editing widget with multiple selected features.
 
+![Screenshot App](https://github.com/conterra/mapapps-editing-bulkaction/blob/main/screenshot.png)
 
 ## Installation Guide
 - map.apps 4.20.0 or later
