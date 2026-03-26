@@ -34,7 +34,6 @@ export class EditingBulkAction implements BulkButtonTableAction {
     uiType = "button" as const;
 
     constructor(properties: Record<string, any>){
-        console.info("Properties in constructor: ", properties);
         this.toolId = properties.toolId;
         this.id = "bulk-action-" + properties.id;
         this.icon = properties.icon;
@@ -43,7 +42,6 @@ export class EditingBulkAction implements BulkButtonTableAction {
         this.rules = properties.rules;
     }
     async trigger(actionContext: BulkActionContext): Promise<void> {
-        console.info("Properties: ", this._properties);
         const dataTable = actionContext.dataTable;
         const tableModel = dataTable.tableModel;
         const layer = dataTable.dataset?.dataSource?.layer;
