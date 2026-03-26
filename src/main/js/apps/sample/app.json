@@ -36,7 +36,8 @@
             "toolset",
             "dn_imprintprivacy",
             "dn_editing-bulkaction",
-            "editing"
+            "editing",
+            "toolrules"
         ],
         "i18n": [
             "bundle"
@@ -46,7 +47,8 @@
         "dn_editing-bulkaction": {
             "Config": {
                 "storeIds": [
-                    "stoerung"
+                    "stoerung",
+                    "koeln3_places"
                 ]
             }
         },
@@ -390,6 +392,7 @@
                                 },
                                 {
                                     "title": "${map.koeln3.places.title}",
+                                    "id": "koeln3_places",
                                     "url": "https://services.arcgis.com/ObdAEOfl1Z5LP2D0/arcgis/rest/services/Köln/FeatureServer/9",
                                     "type": "AGS_FEATURE",
                                     "popupTemplate": {
@@ -446,6 +449,7 @@
                     {
                         "id": "mapview_tools",
                         "tools": [
+                            "selection-ui-tool",
                             "locateMeTool",
                             "zoomInTool",
                             "zoomOutTool",
@@ -541,6 +545,13 @@
                     "windowType": "container",
                     "cssClass": "showToolLabels"
                 }
+            }
+        },
+        "toolrules":{
+            "ToolActiveStateManager": {
+                "activateOnStartToolIds": [
+                    "selection-ui-tool"
+                ]
             }
         }
     }
