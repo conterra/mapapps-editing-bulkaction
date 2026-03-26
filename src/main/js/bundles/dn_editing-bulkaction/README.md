@@ -20,4 +20,4 @@ This bundle adds a bulk action to the result UI, allowing users to open the edit
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `storeIds` | `String[]` | Array of store IDs for which the bulk action should be visible in the result table. The bulk action will only appear for data tables matching one of these store IDs. |
+| `storeIds` | `String[]` | Array of store IDs for which the bulk action should be visible in the result table. The bulk action will only appear for data tables matching one of these store IDs. If not configured, the bulk action appears for all stores. |

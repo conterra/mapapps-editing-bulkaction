@@ -61,7 +61,11 @@ export class EditingBulkAction implements BulkButtonTableAction {
     }
 
     provideDisplayState(dataTable: DataTable): Partial<TableActionDisplayState> {
-        const visible = this._properties!.storeIds.includes(dataTable.id);
+        const properties = this._properties!;
+        if(!properties.storeIds){
+            return { visible: true };
+        }
+        const visible = properties.storeIds.includes(dataTable.id);
         return { visible };
     }
 
